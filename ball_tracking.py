@@ -4,7 +4,7 @@ import csv
 from datetime import datetime
 import os
 
-video_path = 'C:/Users/HP/pythonProject1/AI_assignement/AI Assignment video.mp4'
+video_path = 'C:/Users/HP/pythonProject1/AI_assignement/AI Assignment video.mp4'  #replace this with your video path
 cap = cv2.VideoCapture(video_path)
 
 color_ranges = {
@@ -29,7 +29,7 @@ def is_inside_quadrant(x, y, quadrant):
     return x1 <= x <= x2 and y1 <= y <= y2
 
 def write_event(time, quadrant, color, event_type):   #creating csv file to store the events.
-    csv_file_path = 'C:/Users/HP/pythonProject1/AI_assignement/ball_tracking_events_nw.csv'
+    csv_file_path = 'C:/Users/HP/pythonProject1/AI_assignement/ball_tracking_events_nw.csv'   #replace here you want to store the events
     try:
         # Check if the file exists and is empty
         file_exists = os.path.isfile(csv_file_path)
